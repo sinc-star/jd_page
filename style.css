@@ -1,0 +1,258 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+/* 导航栏 */
+.header{
+    height: 36px;
+    border-bottom: 5px solid rgba(0, 0, 0, .06);
+    background-color: #fff;
+    font: 12px / 1.5 PingFang SC, system-ui, -apple-system;
+}
+
+#nav{
+    width: 1190px;
+    margin: 0 auto;
+    height: 36px;
+    line-height: 36px;
+    color: #505259;
+    display: flex;
+    justify-content: space-between;
+}
+.left,
+.right{
+    display: flex;
+}
+
+.left a,
+.right a{
+    color: #666;
+    padding: 0 10px;
+    position: relative;
+}
+
+.left a:hover,
+.right a:hover {
+    color: red;
+}
+.region{
+    color: #666;
+    padding-right: 10px;
+}
+.register{
+    color: red;
+}
+
+/* 分割线 */
+.left a:not(:last-child)::after,
+.right a:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top:35%;
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+}
+
+/* 第二部分 */
+.second{
+    width: auto;
+    height: auto;
+    background-color: red;
+}
+
+/* 容器样式 1*/
+.w {
+    height: 134px;
+    background: red;
+    display: flex;
+    align-items: center;
+    padding-left: 350px;
+    /* 给logo留出空间 */
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+/* 搜索区域 */
+.search_content {
+    width: 790px;
+    margin: 0 auto;
+}
+.search_content::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.search_box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* 输入框 */
+input[type="text"] {
+    width: 300px;
+    height: 44px;
+    padding: 0 120px 0 20px;
+    /* 右侧留出按钮空间 */
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* 内置搜索按钮 */
+.search_b {
+    position: absolute;
+    right: 352px;
+    /* 京言AI按钮宽度+间距 */
+    top:50%;
+    transform: translateY(-50%);
+    height: 41px;
+    width: 80px;
+    background: red;
+    border: 1px solid red;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* 京言AI按钮 */
+.ai {
+    position: absolute;
+    right: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 44px;
+    width: 80px;
+    background: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: red;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* 广告链接 */
+.links {
+    display: flex;
+    gap: 35px;
+    padding-left: 3px;
+    position: absolute;
+    bottom: 1em;
+    left: 451px;
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color:#ddd
+}
+
+/* 第三部分 */
+.third{
+    width: 1064px;
+    height: 168px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+.third .icon1,
+.third .icon2{
+    position: relative;
+    margin: 12px 12px 12px 0;
+    float: left;
+    width: 136px;
+    height: 144px;
+    border: 1px solid blueviolet;
+
+}
+
+.third .icon4,
+.third .icon5 {
+    position: relative;
+    float: right;
+    width: 136px;
+    height: 144px;
+    border: 1px solid blueviolet;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.third .icon3{
+    position: relative;
+    float: left;
+    width: auto;
+    height: 144px;
+    width: 461px;
+    border: 1px solid pink;
+    margin-top: 12px;
+}
+.third img{
+    width: 80px;
+    height: 80px;
+}
+
+/* 主页 */
+.item{
+    position: relative;
+    width: 1269px;
+    height: 432px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    top:8px
+}
+
+/* 导航栏2 */
+.fourth{
+    width: 1269px;
+    height: 68px;
+    border: 1px solid royalblue;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* 商品展示 */
+.goods{
+    position: relative;
+    top: 15px;
+    width: 1269px;
+    height: 1500px;
+    border-radius: 8px;
+    border: 2px solid greenyellow;
+    margin: 0 auto;
+    background-color: white;
+}
+.commoditiy{
+    position: relative;
+    margin-top: 20px;
+}
+.goods .commoditiy div{
+    float: left;
+    position: relative;
+    margin-right: 9px;
+    width: 242.6px;
+    height: 362.6px;
+    border: 1px solid rgb(20, 99, 235);
+}
