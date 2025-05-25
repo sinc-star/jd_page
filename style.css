@@ -1,6 +1,6 @@
 /* 初始化 */
 *{
-    padding: 0%;
+    padding: 0;
     margin: 0;
 }
 a{
@@ -16,6 +16,8 @@ li{
     background-color: #fff;
     font: 12px / 1.5 PingFang SC, system-ui, -apple-system;
 }
+
+/* 冻结窗口 */
 
 #nav{
     width: 1190px;
@@ -65,8 +67,8 @@ li{
 /* 第二部分 */
 .second{
     width: auto;
-    height: 1000px;
-    background-color: red;
+    height: 713px;
+    background: linear-gradient(rgb(255, 18, 36) 0%, rgb(255, 18, 36) 50%, #f7f8fc 100%);
 }
 
 /* 容器样式 1*/
@@ -207,10 +209,10 @@ input[type="text"] {
 .third .icon3{
     position: relative;
     float: left;
-    width: auto;
     height: 144px;
     width: 461px;
     margin-top: 12px;
+    margin-left: 6px;
     background-color: #fff;
     border-radius: 6px;
 }
@@ -332,54 +334,59 @@ input[type="text"] {
 }
 /* 导航栏2 */
 .fourth{
+    float: left;
     width: 1253px;
-    padding-left: 16px;
     height: 68px;
-    background-color: white;
-    margin-top: 10px;
+    background-color: #ffffff;
 }
-.fourth #first{
-    border-radius: 6px;
-    float: left;
-    width: 108px;
-    height: 36px;
-    margin: 16px 0;
-    text-align: center;
-    line-height: 36px;
-    background-color: #ffd8d4;
+.fourth::after {
+    content: '';
+    display: block;
+    clear: both;
 }
-.fourth div:nth-child(2),
-.fourth div:nth-child(3),
-.fourth div:nth-child(4),
-.fourth div:nth-child(5),
-.fourth div:nth-child(6){
-    border-radius: 6px;
-    background-color:#f2f3f5;
+.fourth div{
     float: left;
+    background-color: #f7f8fc;
     width: 108px;
     height: 36px;
     margin: 16px 0 16px 16px;
-    text-align: center;
-    line-height: 36px;
+    border-radius: 6px;
+}
+.fourth div img{
+    width: 24px;
+    height: 24px;
 }
 .fourth div a{
     color: #1a1a1a;
-    font-size: 19px;
-}
-.fourth #first a{
-    color: #f32711;
+    font-size: 16px;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 36px;
+    margin: 0 0 0 6px;
     font-weight: 700;
 }
+.fourth #first{
+    background-color: #f8dbd8;
+}
+.fourth #first a{
+    color: #ff0f23;
+}
 /* 商品展示 */
+.main{
+    width: 1269px;
+    height: auto;
+    padding: 0 54px;
+    margin:0;
+    background-color: #f7f8fc;
+}
 .goods{
     position: relative;
-    top: -245px;
+    top:20px;
     width: 1269px;
-    height: 1500px;
+    height: 1250px;
     border-radius: 8px;
-    border: 2px solid greenyellow;
     margin: 0 auto;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .commoditiy{
@@ -387,11 +394,196 @@ input[type="text"] {
     margin-top: 20px;
 }
 
-.goods .commoditiy div{
+.main .goods .commoditiy ul{
     float: left;
+}
+.main .goods .commoditiy ul li{
+    width: 242px;
+    height: 362px;
+    float: left;
+    background-color: #f7f8fc;
+    border-radius: 8px;
+    border: 1px solid #141313;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+.main .goods .commoditiy ul li:nth-child(5n){
+    margin-right: 0;
+}
+.main .goods .commoditiy ul li:nth-child(5n+1){
+    margin-left: 8px;
+}
+.main .goods .commoditiy ul li div p{
+    border: 1px solid brown;
+}
+/* 商品图大小 */
+.main .goods .commoditiy ul li img{
+    width: 240px;
+    height: 240px;
+    border-radius: 6px;
+}
+/* 图片第六个占满 */
+.main .goods .commoditiy ul #butie img{
+    width: 242px;
+    height: 362px;
+}
+/* 页面末尾 */
+.end{
+    position: absolute;
+    top: 2000px;
+}
+.servic{
+    width: 1377px;
+    height: 42px;
+    padding: 30px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #dbd9d9;
+    background-color: #f7f8fc;
+}
+.end .servic ul li{
+    width: 297px;
+    height: 42px;
+    border: 1px solid black;
+    float: left;
+}
+
+.end .servic #servic_model{
+    margin-left: 85px;
+    height: 42px;
+    width: auto;
+}
+
+.end .servic ul li div{
+    width: 180px;
+    height: 42px;
+    padding-left: 45px;
+    margin: 0 36px;
+    border: 1px solid greenyellow;
+}
+.end .servic #servic_model ul li div h5{
+    line-height: 42px;
+    color: #f32711;
+    font-size: 20px;
+    width: 36px;
+    height: 42px;
+}
+.end .servic #servic_model ul li div p {
     position: relative;
-    margin-right: 9px;
-    width: 242.6px;
-    height: 362.6px;
-    border: 1px solid rgb(20, 99, 235);
+    top: -42px;
+    left: 36px;
+    width: 180px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+}
+
+.help{
+    width: 1377px;
+    height: 160px;
+    padding: 20px 0;
+    background-color: #f7f8fc;
+    border-bottom: 1px solid #dbd9d9;
+}
+.help .grid{
+    height: 160px;
+    width: 1080px;
+    margin: 0 auto;
+}
+.help .grid div{
+    float: left;
+}
+.help .grid div h5{
+    width: 238px;
+    height: 22px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.help .grid #last_grid{
+    width: 60px;
+    height: 22px;
+}
+.help .grid div ul li a{
+    color: #505259;
+    font-size: 12px;
+}
+
+.footer{
+    width: 1377px;
+    height: 213px;
+    padding: 15px 0;
+    border:1px transparent;
+    background-color: #f7f8fc;
+}
+.footer .p1 {
+    text-align: center;
+    /* 父级容器设置居中 */
+}
+
+.mod_copyright_links {
+    display: inline-block;
+    /* 转换为行内块级元素 */
+    margin: 0 auto;
+    /* 自动水平居中 */
+}
+.footer .p1{
+    margin: 0 auto;
+    width: 1377px;
+    height: 18px;
+}
+.mod_copyright_links a{
+    color: #666666;
+    font-size: 12px;
+    margin-left: 7px;
+}
+.mod_copyright_links a:hover{
+    color: #f32711;
+}
+.mod_copyright_links span{
+    color: #666666;
+    font-size: 12px;
+    width: 2.34px;
+}
+
+.mod_copyright_subsites p a,
+.mod_copyright_subsites p span,
+.mod_copyright_cert p a,
+.mod_copyright_cert p span{
+    color: #b9b9b9;
+    font-size: 12px;
+    margin-left: 9px;
+}
+.footer .mod_copyright_info {
+    text-align: center;
+    margin-top: 10px;
+}
+.mod_copyright_cert p,
+.mod_copyright_subsites p{
+    display: inline-block;
+    margin: 0 auto;
+}
+.mod_copyright_cert p a:hover,
+.mod_copyright_subsites p a:hover{
+    color: #f32711;
+}
+.mod_auth{
+    background-color: #f7f8fc;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.mod_copyright_auth{
+    display: inline-block;
+    background-color: #f7f8fc;
+    margin: 0 auto;
+    width: 1377px;
+    height: 37px;
+}
+.mod_copyright_auth a{
+    width: 103px;
+    height: 32px;
+    margin: 0 3px;
+    font-size: 12px;
+    color: #666666;
 }
