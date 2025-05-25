@@ -1,9 +1,13 @@
+/* 初始化 */
 *{
     padding: 0%;
     margin: 0;
 }
 a{
     text-decoration: none;
+}
+li{
+    list-style: none;
 }
 /* 导航栏 */
 .header{
@@ -61,7 +65,7 @@ a{
 /* 第二部分 */
 .second{
     width: auto;
-    height: auto;
+    height: 1000px;
     background-color: red;
 }
 
@@ -105,7 +109,9 @@ a{
 
 /* 输入框 */
 input[type="text"] {
-    width: 300px;
+    position: absolute;
+    top: -25px;
+    width: 360px;
     height: 44px;
     padding: 0 120px 0 20px;
     /* 右侧留出按钮空间 */
@@ -117,14 +123,14 @@ input[type="text"] {
 /* 内置搜索按钮 */
 .search_b {
     position: absolute;
-    right: 352px;
+    right: 292px;
     /* 京言AI按钮宽度+间距 */
-    top:50%;
+    top: -3px;;
     transform: translateY(-50%);
     height: 41px;
     width: 80px;
     background: red;
-    border: 1px solid red;
+    border: none;
     border-radius: 8px;
     color: white;
     cursor: pointer;
@@ -135,8 +141,8 @@ input[type="text"] {
 /* 京言AI按钮 */
 .ai {
     position: absolute;
-    right: 250px;
-    top: 50%;
+    right: 195px;
+    top: -3px;
     transform: translateY(-50%);
     height: 44px;
     width: 80px;
@@ -152,16 +158,16 @@ input[type="text"] {
 /* 广告链接 */
 .links {
     display: flex;
-    gap: 35px;
+    gap: 20px;
     padding-left: 3px;
     position: absolute;
-    bottom: 1em;
-    left: 451px;
+    bottom: 25px;
+    left: 465px;
 }
 
 .links a {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
 }
 
@@ -174,7 +180,6 @@ input[type="text"] {
     width: 1064px;
     height: 168px;
     margin: 0 auto;
-    border: 2px solid black;
 }
 .third .icon1,
 .third .icon2{
@@ -183,8 +188,8 @@ input[type="text"] {
     float: left;
     width: 136px;
     height: 144px;
-    border: 1px solid blueviolet;
-
+    background-color: #fff;
+    border-radius: 6px;
 }
 
 .third .icon4,
@@ -193,9 +198,10 @@ input[type="text"] {
     float: right;
     width: 136px;
     height: 144px;
-    border: 1px solid blueviolet;
     margin-left: 12px;
     margin-top: 12px;
+    background-color: #fff;
+    border-radius: 6px;
 }
 
 .third .icon3{
@@ -204,8 +210,9 @@ input[type="text"] {
     width: auto;
     height: 144px;
     width: 461px;
-    border: 1px solid pink;
     margin-top: 12px;
+    background-color: #fff;
+    border-radius: 6px;
 }
 .third img{
     width: 80px;
@@ -214,29 +221,159 @@ input[type="text"] {
 
 /* 主页 */
 .item{
+    color:#666666;
     position: relative;
-    width: 1269px;
-    height: 432px;
-    border: 1px solid black;
+    padding: 16px;
+    width: 1237px;
+    height: 400px;
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
     top:8px
 }
 
+/* 商品栏目 */
+.list{
+    position: relative;
+    top: 6px;
+}
+.list li{
+    width: 230px;
+    height: 36px;
+    padding: 0 0 0 18px;
+    background-color: #f2f3f5;
+    transition: color 0.2s;
+}
+.list li a{
+    font-size: 14px;
+    color: #1a1a1a;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 36px;
+}
+.list li:hover{
+    background-color: #ddd;
+}
+.list li a:hover{
+    color: rgb(242, 37, 37);
+    text-decoration: underline;
+}
+.list li span{
+    padding: 0 4px;
+}
+
+/* 横向部分 */
+.item ul li{
+    width: auto;
+    display: block;
+    height: 48px;
+    float: left;
+    position: relative;
+    left: 260px;
+    bottom: 390px;
+    background-color: #f2f3f5;
+}
+.item .list2 ul li a {
+    margin: 0 24px;
+    font-weight: 800;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-family: "PingFang SC";
+    text-align: center;
+    line-height: 48px;
+}
+.item .list2 ul li span{
+    color: #ddd;
+}
+.item #arrow{
+    background-color: #f2f3f5;
+    position: absolute;
+    width: 17px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    top: 22px;
+    left: 968px;
+    border-radius: 0 8px 8px 0;
+    color: #1a1a1a;
+    text-indent: 2px;
+}
+
+.item .middle{
+    margin: 16px 0;
+    position: relative;
+    top: -344px;
+    left: 260px;
+    width: 709px;
+    height: 336px;
+    background-color: yellow;
+}
+/* 主页右上 */
+.item .right_up{
+    float: right;
+    position: absolute;
+    top: 22px;
+    left: 1005px;
+    width: 248px;
+    height: 254px;
+    padding: 12px 0;
+    background-color: palegreen;
+}
+/* 主页右下 */
+.item .right_down{
+    top: 326px;
+    left: 1005px;
+    position: absolute;
+    float: right;
+    width: 240px;
+    height: 94px;
+    padding-left: 8px;
+    background-color: pink;
+}
 /* 导航栏2 */
 .fourth{
-    width: 1269px;
+    width: 1253px;
+    padding-left: 16px;
     height: 68px;
-    border: 1px solid royalblue;
     background-color: white;
     margin-top: 10px;
 }
-
+.fourth #first{
+    border-radius: 6px;
+    float: left;
+    width: 108px;
+    height: 36px;
+    margin: 16px 0;
+    text-align: center;
+    line-height: 36px;
+    background-color: #ffd8d4;
+}
+.fourth div:nth-child(2),
+.fourth div:nth-child(3),
+.fourth div:nth-child(4),
+.fourth div:nth-child(5),
+.fourth div:nth-child(6){
+    border-radius: 6px;
+    background-color:#f2f3f5;
+    float: left;
+    width: 108px;
+    height: 36px;
+    margin: 16px 0 16px 16px;
+    text-align: center;
+    line-height: 36px;
+}
+.fourth div a{
+    color: #1a1a1a;
+    font-size: 19px;
+}
+.fourth #first a{
+    color: #f32711;
+    font-weight: 700;
+}
 /* 商品展示 */
 .goods{
     position: relative;
-    top: 15px;
+    top: -245px;
     width: 1269px;
     height: 1500px;
     border-radius: 8px;
@@ -244,10 +381,12 @@ input[type="text"] {
     margin: 0 auto;
     background-color: white;
 }
+
 .commoditiy{
     position: relative;
     margin-top: 20px;
 }
+
 .goods .commoditiy div{
     float: left;
     position: relative;
